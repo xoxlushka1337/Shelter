@@ -29,7 +29,7 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  margin: 0;
 }
 ul[class],
 ol[class] {
@@ -37,6 +37,7 @@ ol[class] {
 }
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  text-decoration: none;
 }
 img {
   max-width: 100%;
@@ -54,13 +55,44 @@ select {
 }
 //---------------
 
-.start-screen {
+$primary: #f1cdb3;
+
+body {
+  font-weight: 400;
 }
+
 .container {
   max-height: 1200px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 .two-column {
   display: flex;
   justify-content: space-between;
+}
+.header {
+  padding-top: 30px;
+  &__logo {
+  }
+
+  &__name {
+    color: $primary;
+    font-size: 32px;
+  }
+
+  &__description {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+}
+
+.navigation {
+  align-self: center;
+  &__list {
+    display: flex;
+  }
+
+  &__li {
+    margin-left: 35px;
+  }
 }
