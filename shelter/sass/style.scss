@@ -64,7 +64,10 @@ $color-primary-light: #fddcc4;
 $color-light-xl: #ffffff;
 $color-dark-s: #cdcdcd;
 $color-dark-m: #b2b2b2;
+$color-dark-l: #545454;
+$color-dark-xl: #4c4c4c;
 $color-dark-3xl: #292929;
+$color-light-l: #f6f6f6;
 $color-light-xl: #ffffff;
 
 $main-font: 'Georgia';
@@ -165,6 +168,7 @@ body::-webkit-scrollbar-thumb {
 // блок start-screen
 .start-screen__conteiner {
   margin-top: 86px;
+  padding-bottom: 3px;
 }
 .start-screen {
   background: url(../imgs/noise_transparent@2x.png),
@@ -203,5 +207,40 @@ body::-webkit-scrollbar-thumb {
   &__dog {
     width: 698px;
     height: 728px;
+  }
+}
+
+// блок abaut
+
+.about {
+  margin-top: 80px;
+  padding: 0 175px;
+  &__container {
+  }
+  &__image {
+    margin-right: 120px;
+  }
+
+  &__img-pets {
+  }
+
+  &__content {
+    margin-top: 15px;
+  }
+
+  &__title {
+    font-family: $main-font;
+    font-size: 35px;
+    width: 370px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+  }
+
+  &__text {
+    @extend %text-font;
+    font-size: 15px;
+    line-height: 160%;
+    color: $color-dark-xl;
+    margin-top: 24px;
   }
 }
