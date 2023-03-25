@@ -67,11 +67,19 @@ $color-dark-m: #b2b2b2;
 $color-dark-l: #545454;
 $color-dark-xl: #4c4c4c;
 $color-dark-3xl: #292929;
+$color-light-s: #fafafa;
 $color-light-l: #f6f6f6;
 $color-light-xl: #ffffff;
 
 $main-font: 'Georgia';
 $additional-font: 'Arial';
+
+%title-h2 {
+  font-weight: 300;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
 
 %text-font {
   font-family: $additional-font;
@@ -80,13 +88,31 @@ $additional-font: 'Arial';
   font-size: 15px;
 }
 %button-style {
-  background-color: $color-primary;
   color: $color-dark-3xl;
   border-radius: 100px;
-  padding: 17px 49px;
-  letter-spacing: 0.06em;
+  padding: 14.5px 44px;
+  letter-spacing: 0.08em;
+  border: 2px $color-primary solid;
 }
-
+%button-style:hover {
+  background-color: $color-primary-light;
+  border: 2px $color-primary-light solid;
+  transition: all 0.3s;
+}
+%border {
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  width: 52px;
+  height: 52px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+%border:hover {
+  border: 2px solid $color-primary-light;
+  background-color: $color-primary-light;
+  transition: all 0.3s;
+}
 body {
   font-family: $main-font;
   font-weight: 300;
@@ -199,6 +225,7 @@ body::-webkit-scrollbar-thumb {
 
   &__button {
     @extend %button-style;
+    background-color: $color-primary;
   }
 
   &__image {
@@ -213,8 +240,7 @@ body::-webkit-scrollbar-thumb {
 // блок abaut
 
 .about {
-  margin-top: 80px;
-  padding: 0 175px;
+  margin: 80px 175px 100px;
   &__container {
   }
   &__image {
@@ -229,11 +255,9 @@ body::-webkit-scrollbar-thumb {
   }
 
   &__title {
+    @extend %title-h2;
     font-family: $main-font;
-    font-size: 35px;
     width: 370px;
-    line-height: 130%;
-    letter-spacing: 0.06em;
   }
 
   &__text {
@@ -242,5 +266,77 @@ body::-webkit-scrollbar-thumb {
     line-height: 160%;
     color: $color-dark-xl;
     margin-top: 24px;
+  }
+}
+
+// pets
+
+.pets {
+  background: $color-light-l;
+  color: $color-dark-l;
+  padding: 80px 0 117px 0;
+
+  &__title {
+    @extend %title-h2;
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  &__container-button {
+    text-align: center;
+    margin-top: 75px;
+  }
+
+  &__button {
+    @extend %button-style;
+    background-color: $color-primary;
+  }
+}
+
+.slider {
+  display: flex;
+
+  &__arrow-left {
+    @extend %border;
+    align-self: center;
+    background-image: url(../imgs/pets/slider-Arrow-left.png);
+    margin-right: 54px;
+  }
+
+  &__cards {
+    display: flex;
+  }
+
+  &__card {
+    text-align: center;
+    background: $color-light-s;
+    border-radius: 9px;
+    padding-bottom: 30px;
+    margin-right: 90px;
+  }
+  &__card:last-child {
+    margin-right: 50px;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    margin: 30px 0;
+  }
+
+  &__button {
+    @extend %button-style;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px $color-primary solid;
+  }
+
+  &__arrow-right {
+    @extend %border;
+    align-self: center;
+    background-image: url(../imgs/pets/slider-Arrow-right.png);
   }
 }
