@@ -62,14 +62,14 @@ select {
   font: inherit;
 }
 
-.help__title, .pets__title, .about__title {
+.donation__title, .help__title, .pets__title, .about__title {
   font-weight: 300;
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
 }
 
-.about__text, .start-screen__text {
+.donation__description-card, .about__text, .start-screen__text {
   font-family: "Arial";
   font-style: normal;
   font-weight: 300;
@@ -330,7 +330,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .help {
-  padding: 80px 0 100px 0;
+  padding: 80px 0 99px 0;
 }
 .help__title {
   margin: 0 auto;
@@ -371,4 +371,50 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.06em;
   color: #545454;
   margin-top: 30px;
+}
+
+.donation {
+  background: #f6f6f6;
+  padding: 81px 143px 100px;
+}
+.donation__img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 30px;
+}
+.donation__title {
+  width: 300px;
+}
+.donation__description-card {
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin: 20px 0 18px;
+}
+.donation__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f1cdb3;
+  border-radius: 9px;
+  width: 349px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+.donation__card-number {
+  font-size: 20px;
+  line-height: 115%;
+  color: #545454;
+  letter-spacing: 0.06em;
+}
+.donation__text {
+  font-family: "Arial";
+  font-size: 12px;
+  font-style: italic;
+  line-height: 18px;
+  color: #b2b2b2;
 }

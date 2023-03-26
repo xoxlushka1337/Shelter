@@ -246,7 +246,7 @@ body::-webkit-scrollbar-thumb {
 // help
 
 .help {
-  padding: 80px 0 100px 0;
+  padding: 80px 0 99px 0;
   &__title {
     @extend %title-h2;
     margin: 0 auto;
@@ -281,5 +281,59 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: 0.06em;
     color: $color-dark-l;
     margin-top: 30px;
+  }
+}
+
+// блок donation
+
+.donation {
+  background: $color-light-l;
+  padding: 81px 143px 100px;
+  &__img {
+    align-self: center;
+    margin-right: 30px;
+  }
+  &__content {
+  }
+
+  &__title {
+    @extend %title-h2;
+    width: 300px;
+  }
+
+  &__description-card {
+    @extend %text-font;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    margin: 20px 0 18px;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-primary;
+    border-radius: 9px;
+    width: 349px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+  }
+
+  &__card-number {
+    font-size: 20px;
+    line-height: 115%;
+    color: $color-dark-l;
+    letter-spacing: 0.06em;
+  }
+
+  &__text {
+    font-family: $additional-font;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 18px;
+    color: $color-dark-m;
   }
 }
