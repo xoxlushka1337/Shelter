@@ -1,118 +1,8 @@
-// сброс стилей
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-ul[class],
-ol[class] {
-  padding: 0;
-}
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  margin: 0;
-}
-ul[class],
-ol[class] {
-  list-style: none;
-}
-a {
-  text-decoration-skip-ink: auto;
-  text-decoration: none;
-}
-img {
-  display: block;
-}
-/* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
-  margin-top: 1em;
-}
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-//---------------
-
 @font-face {
   font-family: 'Georgia';
   src: url(../fonts/georgia-regular.ttf);
 }
 
-$color-primary: #f1cdb3;
-$color-primary-light: #fddcc4;
-$color-light-xl: #ffffff;
-$color-dark-s: #cdcdcd;
-$color-dark-m: #b2b2b2;
-$color-dark-l: #545454;
-$color-dark-xl: #4c4c4c;
-$color-dark-3xl: #292929;
-$color-light-s: #fafafa;
-$color-light-l: #f6f6f6;
-$color-light-xl: #ffffff;
-
-$main-font: 'Georgia';
-$additional-font: 'Arial';
-
-%title-h2 {
-  font-weight: 300;
-  font-size: 35px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-}
-
-%text-font {
-  font-family: $additional-font;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-}
-%button-style {
-  color: $color-dark-3xl;
-  border-radius: 100px;
-  padding: 14.5px 44px;
-  letter-spacing: 0.08em;
-  border: 2px $color-primary solid;
-}
-%button-style:hover {
-  background-color: $color-primary-light;
-  border: 2px $color-primary-light solid;
-  transition: all 0.3s;
-}
-%border {
-  border: 2px solid $color-primary;
-  border-radius: 100px;
-  width: 52px;
-  height: 52px;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-%border:hover {
-  border: 2px solid $color-primary-light;
-  background-color: $color-primary-light;
-  transition: all 0.3s;
-}
 body {
   font-family: $main-font;
   font-weight: 300;
@@ -197,7 +87,7 @@ body::-webkit-scrollbar-thumb {
   padding-bottom: 3px;
 }
 .start-screen {
-  background: url(../imgs/noise_transparent@2x.png),
+  background: url(../imgs/noise_transparent.png),
     radial-gradient(100% 900% at 0% 0%, #5b483a 0%, #262425 100%),
     linear-gradient(0deg, #211f20, #211f20);
   background-position: center center;
@@ -338,5 +228,43 @@ body::-webkit-scrollbar-thumb {
     @extend %border;
     align-self: center;
     background-image: url(../imgs/pets/slider-Arrow-right.png);
+  }
+}
+
+// help
+
+.help {
+  padding: 80px 0 100px 0;
+  &__title {
+    @extend %title-h2;
+    margin: 0 auto;
+    text-align: center;
+    // margin-top: 80px;
+    margin-bottom: 60px;
+  }
+
+  &__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 55px;
+    justify-content: center;
+    text-align: center;
+  }
+  &__block {
+    margin-right: 120px;
+  }
+  &__block-no-margin {
+    margin-right: 0px;
+  }
+  &__icon {
+    margin: 0 auto;
+  }
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    margin-top: 30px;
   }
 }
