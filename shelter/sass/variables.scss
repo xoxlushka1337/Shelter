@@ -32,11 +32,12 @@ $additional-font: 'Arial';
   padding: 14.5px 44px;
   letter-spacing: 0.08em;
   border: 2px $color-primary solid;
+  cursor: pointer;
 }
 %button-style:hover {
   background-color: $color-primary-light;
   border: 2px $color-primary-light solid;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 %border {
   border: 2px solid $color-primary;
@@ -50,5 +51,5 @@ $additional-font: 'Arial';
 %border:hover {
   border: 2px solid $color-primary-light;
   background-color: $color-primary-light;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }

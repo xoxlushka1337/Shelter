@@ -187,6 +187,7 @@ body::-webkit-scrollbar-thumb {
 
 .slider {
   display: flex;
+  justify-content: center;
 
   &__arrow-left {
     @extend %border;
@@ -207,7 +208,18 @@ body::-webkit-scrollbar-thumb {
     margin-right: 90px;
   }
   &__card:last-child {
-    margin-right: 50px;
+    margin-right: 53px;
+  }
+
+  &__card:hover {
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background: $color-light-xl;
+    cursor: pointer;
+  }
+  &__card:hover &__button {
+    background-color: $color-primary-light;
+    border: 2px $color-primary-light solid;
+    transition: all 0.5s;
   }
 
   &__title {
@@ -239,7 +251,6 @@ body::-webkit-scrollbar-thumb {
     @extend %title-h2;
     margin: 0 auto;
     text-align: center;
-    // margin-top: 80px;
     margin-bottom: 60px;
   }
 
@@ -249,6 +260,10 @@ body::-webkit-scrollbar-thumb {
     row-gap: 55px;
     justify-content: center;
     text-align: center;
+    @media (min-width: 1300px) {
+      width: 1065px;
+      margin: 0 auto;
+    }
   }
   &__block {
     margin-right: 120px;
