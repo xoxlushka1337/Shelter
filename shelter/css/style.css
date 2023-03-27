@@ -51,7 +51,8 @@
 }
 
 .additional-container {
-  padding: 0 78px;
+  width: 925px;
+  margin: 0 auto;
 }
 
 .header {
@@ -138,6 +139,9 @@
 
 .about {
   margin: 80px 175px 100px;
+}
+.about__container {
+  width: 929px;
 }
 .about__image {
   margin-right: 120px;
@@ -282,6 +286,9 @@
 .donation {
   background: #f6f6f6;
   padding: 81px 143px 100px;
+}
+.donation__container {
+  width: 992px;
 }
 .donation__img {
   -ms-flex-item-align: center;

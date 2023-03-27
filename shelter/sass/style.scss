@@ -1,7 +1,9 @@
 @import '../sass/variables.scss';
 
 .additional-container {
-  padding: 0 78px;
+  // padding: 0 78px;
+  width: 925px;
+  margin: 0 auto;
 }
 .header {
   padding-top: 30px;
@@ -98,7 +100,9 @@
 
 .about {
   margin: 80px 175px 100px;
-
+  &__container {
+    width: 929px;
+  }
   &__image {
     margin-right: 120px;
   }
@@ -253,6 +257,9 @@
 .donation {
   background: $color-light-l;
   padding: 81px 143px 100px;
+  &__container {
+    width: 992px;
+  }
   &__img {
     align-self: center;
     margin-right: 30px;
