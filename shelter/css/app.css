@@ -62,7 +62,7 @@ select {
   font: inherit;
 }
 
-.donation__title, .help__title, .pets__title, .about__title {
+.footer__title, .donation__title, .help__title, .pets__title, .about__title {
   font-weight: 300;
   font-size: 35px;
   line-height: 130%;
@@ -141,7 +141,7 @@ body::-webkit-scrollbar-thumb {
   padding: 0 40px;
 }
 
-.two-column {
+.wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,6 +185,9 @@ body::-webkit-scrollbar-thumb {
 }
 .navigation__li a {
   color: #cdcdcd;
+}
+.navigation__li:hover a {
+  color: #fafafa;
 }
 .navigation__li_active {
   border-bottom: #f1cdb3 solid 3px;
@@ -304,6 +307,8 @@ body::-webkit-scrollbar-thumb {
           box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   background: #ffffff;
   cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .slider__card:hover .slider__button {
   background-color: #fddcc4;
@@ -417,4 +422,45 @@ body::-webkit-scrollbar-thumb {
   font-style: italic;
   line-height: 18px;
   color: #b2b2b2;
+}
+
+.footer {
+  background: url(../imgs/noise_transparent.png), radial-gradient(100% 900% at 0% 0%, #5b483a 0%, #262425 100%), -webkit-gradient(linear, left bottom, left top, from(#211f20), to(#211f20));
+  background: url(../imgs/noise_transparent.png), radial-gradient(100% 900% at 0% 0%, #5b483a 0%, #262425 100%), linear-gradient(0deg, #211f20, #211f20);
+  background-position: center center;
+  background-attachment: fixed;
+  padding-top: 40px;
+}
+.footer__column {
+  padding-top: 16px;
+}
+.footer__title {
+  color: #ffffff;
+  margin-bottom: 33px;
+}
+.footer__linc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+  margin-bottom: 25px;
+  height: 46px;
+}
+.footer__icon {
+  height: 32px;
+  margin-right: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.footer__text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.footer__img {
+  height: 310px;
 }
