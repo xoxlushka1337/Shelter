@@ -1,51 +1,11 @@
-@font-face {
-  font-family: 'Georgia';
-  src: url(../fonts/georgia-regular.ttf);
-}
-
-body {
-  font-family: $main-font;
-  font-weight: 300;
-  font-style: normal;
-}
-
-// скролл
-
-body::-webkit-scrollbar {
-  width: 13px;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: #ffffff;
-  border-radius: 100px;
-}
-
-body::-webkit-scrollbar-thumb {
-  border-radius: 100px;
-  border: 3px solid transparent;
-  background-clip: content-box;
-  background-color: $color-dark-3xl;
-}
-
-.container {
-  max-height: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-}
 .header {
   padding-top: 30px;
 
   &__name {
-    a {
-      letter-spacing: 0.06em;
-      color: $color-primary;
-      font-size: 32px;
-      font-weight: 300;
-    }
+    letter-spacing: 0.06em;
+    color: $color-primary;
+    font-size: 32px;
+    font-weight: 300;
   }
 
   &__description {
@@ -137,9 +97,6 @@ body::-webkit-scrollbar-thumb {
   }
   &__image {
     margin-right: 120px;
-  }
-
-  &__img-pets {
   }
 
   &__content {

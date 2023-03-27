@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/app.css" />
   </head>
   <body>
-    <div class="start-screen">
+    <section class="start-screen">
       <div class="container">
         <header class="header">
           <div class="wrapper">
@@ -23,7 +23,7 @@
                   <a href="#" style="pointer-events: none">About the shelter</a>
                 </li>
                 <li class="navigation__li">
-                  <a href="#">Our pets</a>
+                  <a href="./pets.html">Our pets</a>
                 </li>
                 <li class="navigation__li"><a href="#help">Help the shelter</a></li>
                 <li class="navigation__li"><a href="#footer">Contacts</a></li>
@@ -47,123 +47,125 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="about">
-      <div class="container about__container">
-        <div class="wrapper">
-          <div class="about__image">
-            <img class="about__img-pets" src="./imgs/about-pets.png" alt="dog and cats" />
-          </div>
-          <div class="about__content">
-            <h2 class="about__title">About the shelter “Cozy House”</h2>
-            <p class="about__text">
-              Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20%
-              of them will find a family. The others will continue to live with us and will be
-              waiting for a lucky chance to become dearly loved.
-            </p>
-            <p class="about__text">
-              We feed our wards with the best food and make sure that they do not get sick, feel
-              comfortable (including psychologically) and well. We are supported by 87 volunteers
-              and 28 employees of various skill levels. About 12% of the animals are taken by the
-              shelter staff. Taking care of the animals, they become attached to the pets and would
-              hardly ever leave them alone.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pets" id="pets">
-      <div class="container">
-        <h2 class="pets__title">Our friends who<br />are looking for a house</h2>
-        <div class="slider">
-          <span class="slider__arrow-left"></span>
-          <div class="slider__cards">
-            <div class="slider__card">
-              <img class="slider__img" src="./imgs/pets/pets-katrine.png" alt="katrine" />
-              <h3 class="slider__title">Katrine</h3>
-              <button class="slider__button">Learn more</button>
+    </section>
+    <main class="main">
+      <section class="about">
+        <div class="container about__container">
+          <div class="wrapper">
+            <div class="about__image">
+              <img class="about__img-pets" src="./imgs/about-pets.png" alt="dog and cats" />
             </div>
-            <div class="slider__card">
-              <img class="slider__img" src="./imgs/pets/pets-jennifer.png" alt="jennifer" />
-              <h3 class="slider__title">Jennifer</h3>
-              <button class="slider__button">Learn more</button>
-            </div>
-            <div class="slider__card">
-              <img class="slider__img" src="./imgs/pets/pets-woody.png" alt="woody" />
-              <h3 class="slider__title">Woody</h3>
-              <button class="slider__button">Learn more</button>
+            <div class="about__content">
+              <h2 class="about__title">About the shelter “Cozy House”</h2>
+              <p class="about__text">
+                Currently we have 121 dogs and 342 cats on our hands and statistics show that only
+                20% of them will find a family. The others will continue to live with us and will be
+                waiting for a lucky chance to become dearly loved.
+              </p>
+              <p class="about__text">
+                We feed our wards with the best food and make sure that they do not get sick, feel
+                comfortable (including psychologically) and well. We are supported by 87 volunteers
+                and 28 employees of various skill levels. About 12% of the animals are taken by the
+                shelter staff. Taking care of the animals, they become attached to the pets and
+                would hardly ever leave them alone.
+              </p>
             </div>
           </div>
-          <span class="slider__arrow-right"></span>
         </div>
-        <div class="pets__container-button">
-          <a class="pets__button" href="">Get to know the rest</a>
-        </div>
-      </div>
-    </div>
-    <div class="help" id="help">
-      <div class="container">
-        <h2 class="help__title">How you can help<br />our shelter</h2>
-        <div class="help__blocks">
-          <div class="help__block">
-            <img class="help__icon" src="./imgs/help/icon-pet-food.svg" alt="404" />
-            <h3 class="help__subtitle">Pet food</h3>
-          </div>
-          <div class="help__block">
-            <img class="help__icon" src="./imgs/help/icon-transportation.svg" alt="404" />
-            <h3 class="help__subtitle">Transportation</h3>
-          </div>
-          <div class="help__block">
-            <img class="help__icon" src="./imgs/help/icon-toys.svg" alt="404" />
-            <h3 class="help__subtitle">Toys</h3>
-          </div>
-          <div class="help__block">
-            <img class="help__icon" src="./imgs/help/icon-bowls-and-cups.svg" alt="404" />
-            <h3 class="help__subtitle">Bowls and cups</h3>
-          </div>
-          <div class="help__block help__block-no-margin">
-            <img class="help__icon" src="./imgs/help/icon-shampoos.svg" alt="404" />
-            <h3 class="help__subtitle">Shampoos</h3>
-          </div>
-          <div class="help__block">
-            <img class="help__icon" src="./imgs/help/icon-vitamins.svg" alt="404" />
-            <h3 class="help__subtitle">Vitamins</h3>
-          </div>
-          <div class="help__block">
-            <img class="help__icon" src="./imgs/help/icon-medicines.svg" alt="404" />
-            <h3 class="help__subtitle">Medicines</h3>
-          </div>
-          <div class="help__block">
-            <img class="help__icon" src="./imgs/help/icon-collars-leashes.svg" alt="404" />
-            <h3 class="help__subtitle">Collars / leashes</h3>
-          </div>
-          <div class="help__block help__block-no-margin">
-            <img class="help__icon" src="./imgs/help/icon-sleeping-area.svg" alt="404" />
-            <h3 class="help__subtitle">Sleeping areas</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="donation">
-      <div class="container">
-        <div class="wrapper">
-          <img class="donation__img" src="./imgs/donation/donation-dog.png" alt="dog" />
-          <div class="donation__content">
-            <h2 class="donation__title">You can also make a donation</h2>
-            <p class="donation__description-card">Name of the bank / Type of bank account</p>
-            <div class="donation__card">
-              <img class="donation__icon" src="./imgs/donation/credit-card.svg" alt=":(" />
-              <a class="donation__card-number" href="#">8380 2880 8028 8791 7435</a>
+      </section>
+      <section class="pets" id="pets">
+        <div class="container">
+          <h2 class="pets__title">Our friends who<br />are looking for a house</h2>
+          <div class="slider">
+            <span class="slider__arrow-left"></span>
+            <div class="slider__cards">
+              <div class="slider__card">
+                <img class="slider__img" src="./imgs/pets/pets-katrine.png" alt="katrine" />
+                <h3 class="slider__title">Katrine</h3>
+                <button class="slider__button">Learn more</button>
+              </div>
+              <div class="slider__card">
+                <img class="slider__img" src="./imgs/pets/pets-jennifer.png" alt="jennifer" />
+                <h3 class="slider__title">Jennifer</h3>
+                <button class="slider__button">Learn more</button>
+              </div>
+              <div class="slider__card">
+                <img class="slider__img" src="./imgs/pets/pets-woody.png" alt="woody" />
+                <h3 class="slider__title">Woody</h3>
+                <button class="slider__button">Learn more</button>
+              </div>
             </div>
-            <p class="donation__text">
-              Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus
-              tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-            </p>
+            <span class="slider__arrow-right"></span>
+          </div>
+          <div class="pets__container-button">
+            <a class="pets__button" href="./pets.html">Get to know the rest</a>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+      <section class="help" id="help">
+        <div class="container">
+          <h2 class="help__title">How you can help<br />our shelter</h2>
+          <div class="help__blocks">
+            <div class="help__block">
+              <img class="help__icon" src="./imgs/help/icon-pet-food.svg" alt="404" />
+              <h3 class="help__subtitle">Pet food</h3>
+            </div>
+            <div class="help__block">
+              <img class="help__icon" src="./imgs/help/icon-transportation.svg" alt="404" />
+              <h3 class="help__subtitle">Transportation</h3>
+            </div>
+            <div class="help__block">
+              <img class="help__icon" src="./imgs/help/icon-toys.svg" alt="404" />
+              <h3 class="help__subtitle">Toys</h3>
+            </div>
+            <div class="help__block">
+              <img class="help__icon" src="./imgs/help/icon-bowls-and-cups.svg" alt="404" />
+              <h3 class="help__subtitle">Bowls and cups</h3>
+            </div>
+            <div class="help__block help__block-no-margin">
+              <img class="help__icon" src="./imgs/help/icon-shampoos.svg" alt="404" />
+              <h3 class="help__subtitle">Shampoos</h3>
+            </div>
+            <div class="help__block">
+              <img class="help__icon" src="./imgs/help/icon-vitamins.svg" alt="404" />
+              <h3 class="help__subtitle">Vitamins</h3>
+            </div>
+            <div class="help__block">
+              <img class="help__icon" src="./imgs/help/icon-medicines.svg" alt="404" />
+              <h3 class="help__subtitle">Medicines</h3>
+            </div>
+            <div class="help__block">
+              <img class="help__icon" src="./imgs/help/icon-collars-leashes.svg" alt="404" />
+              <h3 class="help__subtitle">Collars / leashes</h3>
+            </div>
+            <div class="help__block help__block-no-margin">
+              <img class="help__icon" src="./imgs/help/icon-sleeping-area.svg" alt="404" />
+              <h3 class="help__subtitle">Sleeping areas</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="donation">
+        <div class="container">
+          <div class="wrapper">
+            <img class="donation__img" src="./imgs/donation/donation-dog.png" alt="dog" />
+            <div class="donation__content">
+              <h2 class="donation__title">You can also make a donation</h2>
+              <p class="donation__description-card">Name of the bank / Type of bank account</p>
+              <div class="donation__card">
+                <img class="donation__icon" src="./imgs/donation/credit-card.svg" alt=":(" />
+                <a class="donation__card-number" href="#">8380 2880 8028 8791 7435</a>
+              </div>
+              <p class="donation__text">
+                Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus
+                tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer" id="footer">
       <div class="container">
         <div class="wrapper">

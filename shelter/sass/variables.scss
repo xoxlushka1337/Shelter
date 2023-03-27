@@ -10,6 +10,11 @@ $color-light-s: #fafafa;
 $color-light-l: #f6f6f6;
 $color-light-xl: #ffffff;
 
+@font-face {
+  font-family: 'Georgia';
+  src: url(../fonts/georgia-regular.ttf);
+}
+
 $main-font: 'Georgia';
 $additional-font: 'Arial';
 
@@ -46,7 +51,16 @@ $additional-font: 'Arial';
   height: 52px;
   background-repeat: no-repeat;
   background-position: center;
+  color: $color-dark-3xl;
   cursor: pointer;
+}
+%border-inactive {
+  border: 2px solid $color-dark-s;
+  border-radius: 100px;
+  width: 52px;
+  height: 52px;
+  color: $color-dark-s;
+  pointer-events: none;
 }
 %border:hover {
   border: 2px solid $color-primary-light;
