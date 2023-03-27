@@ -136,6 +136,52 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between; }
 
+@font-face {
+  font-family: 'Georgia';
+  src: url(../fonts/georgia-regular.ttf); }
+.about__title, .pets__title, .help__title, .donation__title, .footer__title {
+  font-weight: 300;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em; }
+
+.start-screen__text, .about__text, .donation__description-card {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px; }
+
+.start-screen__button, .pets__button, .slider__button {
+  color: #292929;
+  border-radius: 100px;
+  padding: 14.5px 44px;
+  letter-spacing: 0.08em;
+  border: 2px #f1cdb3 solid;
+  cursor: pointer; }
+
+.start-screen__button:hover, .pets__button:hover, .slider__button:hover {
+  background-color: #fddcc4;
+  border: 2px #fddcc4 solid;
+  transition: all 0.5s; }
+
+.slider__arrow-left, .slider__arrow-right {
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  width: 52px;
+  height: 52px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #292929;
+  cursor: pointer; }
+
+.slider__arrow-left:hover, .slider__arrow-right:hover {
+  border: 2px solid #fddcc4;
+  background-color: #fddcc4;
+  transition: all 0.5s; }
+
+.additional-container {
+  padding: 0 78px; }
+
 .header {
   padding-top: 30px; }
   .header__name {

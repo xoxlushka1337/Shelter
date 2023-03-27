@@ -1,3 +1,8 @@
+@import '../sass/variables.scss';
+
+.additional-container {
+  padding: 0 78px;
+}
 .header {
   padding-top: 30px;
 
@@ -93,8 +98,7 @@
 
 .about {
   margin: 80px 175px 100px;
-  &__container {
-  }
+
   &__image {
     margin-right: 120px;
   }
