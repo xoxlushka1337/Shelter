@@ -54,6 +54,9 @@ select {
 @font-face {
   font-family: 'Georgia';
   src: url(../fonts/georgia-regular.ttf); }
+@font-face {
+  font-family: 'Arial';
+  src: url(../fonts/arial/arial-regular.ttf); }
 .about__title, .pets__title, .help__title, .donation__title, .footer__title {
   font-weight: 300;
   font-size: 35px;
@@ -139,6 +142,9 @@ body::-webkit-scrollbar-thumb {
 @font-face {
   font-family: 'Georgia';
   src: url(../fonts/georgia-regular.ttf); }
+@font-face {
+  font-family: 'Arial';
+  src: url(../fonts/arial/arial-regular.ttf); }
 .about__title, .pets__title, .help__title, .donation__title, .footer__title {
   font-weight: 300;
   font-size: 35px;
@@ -221,9 +227,10 @@ body::-webkit-scrollbar-thumb {
   padding-bottom: 3px; }
 
 .start-screen {
-  background: url(../imgs/noise_transparent.png), radial-gradient(100% 900% at 0% 0%, #5b483a 0%, #262425 100%), linear-gradient(0deg, #211f20, #211f20);
-  background-position: center center;
-  background-attachment: fixed; }
+  background: url(../imgs/start-screen-gradient-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
   .start-screen__content {
     margin-top: 167px;
     width: 460px; }
@@ -381,9 +388,10 @@ body::-webkit-scrollbar-thumb {
     color: #b2b2b2; }
 
 .footer {
-  background: url(../imgs/noise_transparent.png), radial-gradient(100% 900% at 0% 0%, #5b483a 0%, #262425 100%), linear-gradient(0deg, #211f20, #211f20);
-  background-position: center center;
-  background-attachment: fixed;
+  background: url(../imgs/start-screen-gradient-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-top: 40px; }
   .footer__column {
     padding-top: 16px; }

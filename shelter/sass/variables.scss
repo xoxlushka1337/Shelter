@@ -14,6 +14,10 @@ $color-light-xl: #ffffff;
   font-family: 'Georgia';
   src: url(../fonts/georgia-regular.ttf);
 }
+@font-face {
+  font-family: 'Arial';
+  src: url(../fonts/arial/arial-regular.ttf);
+}
 
 $main-font: 'Georgia';
 $additional-font: 'Arial';
