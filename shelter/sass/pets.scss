@@ -1,23 +1,27 @@
 @import '../sass/normalaiz.scss';
 @import '../sass/variables.scss';
 @import '../sass/general.scss';
+@media (max-width: 700px) {
+  .burger span {
+    position: absolute;
+    width: 31px;
+    height: 0px;
+    border: 1.5px solid #000;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+}
 .header {
-  padding: 30px 0;
+  padding: 30px 0px 29px;
+  @media (max-width: 946px) {
+    padding: 30px 10px 29px;
+  }
 
   &__name {
-    letter-spacing: 0.06em;
     color: $color-dark-l;
-    font-size: 32px;
-    font-weight: 300;
   }
 
   &__description {
-    font-family: $additional-font;
-    font-size: 13px;
-    margin-top: 10px;
-    margin-left: 4px;
     color: $color-dark-3xl;
-    letter-spacing: 0.1em;
   }
 }
 
@@ -53,13 +57,25 @@
   background: $color-light-l;
   color: $color-dark-l;
   padding: 80px 0 100px 0;
+  @media (max-width: 946px) {
+    padding: 80px 0 76px 0;
+  }
+  @media (max-width: 470px) {
+    padding: 41px 0 44px 0;
+  }
 
   &__title {
     @extend %title-h2;
-    width: 400px;
+    max-width: 400px;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 58px;
+    @media (max-width: 946px) {
+      margin-bottom: 29px;
+    }
+    @media (max-width: 470px) {
+      margin-bottom: 42px;
+    }
   }
 }
 
@@ -68,6 +84,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 30px;
+    column-gap: 40px;
     justify-content: center;
   }
 
@@ -76,10 +93,6 @@
     background: $color-light-s;
     border-radius: 9px;
     padding-bottom: 30px;
-    margin-right: 40px;
-  }
-  &__card-no-margin {
-    margin-right: 0px;
   }
 
   &__card:hover {
@@ -92,6 +105,17 @@
     background-color: $color-primary-light;
     border: 2px $color-primary-light solid;
     transition: all 0.5s;
+  }
+
+  @media (max-width: 770px) {
+    &__card-none {
+      display: none;
+    }
+  }
+  @media (max-width: 405px) {
+    &__card-noneM {
+      display: none;
+    }
   }
 
   &__title {
@@ -117,12 +141,18 @@
   line-height: 116%;
   letter-spacing: 0.06em;
   margin-top: 60px;
+  @media (max-width: 946px) {
+    margin-top: 40px;
+  }
   &__arrow {
     @extend %border;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    @media (max-width: 470px) {
+      margin-right: 10px;
+    }
   }
   &__arrow-left {
     @extend %border-inactive;
@@ -135,49 +165,5 @@
   }
   &__arrow:last-child {
     margin-right: 0px;
-  }
-}
-
-// блок footer
-
-.footer {
-  background: url(../imgs/noise_transparent.png),
-    radial-gradient(100% 900% at 0% 0%, #5b483a 0%, #262425 100%),
-    linear-gradient(0deg, #211f20, #211f20);
-  background-position: center center;
-  background-attachment: fixed;
-  padding-top: 40px;
-  &__column {
-    padding-top: 16px;
-  }
-
-  &__title {
-    @extend %title-h2;
-    color: $color-light-xl;
-    margin-bottom: 33px;
-  }
-
-  &__linc {
-    display: flex;
-
-    font-size: 20px;
-    line-height: 115%;
-    letter-spacing: 0.06em;
-    color: $color-primary;
-    margin-bottom: 25px;
-
-    height: 46px;
-  }
-
-  &__icon {
-    height: 32px;
-    margin-right: 20px;
-    align-self: center;
-  }
-  &__text {
-    align-self: center;
-  }
-  &__img {
-    height: 310px;
   }
 }

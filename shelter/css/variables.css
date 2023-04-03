@@ -1,4 +1,8 @@
 @font-face {
   font-family: 'Georgia';
-  src: url(../fonts/georgia-regular.ttf);
-}
+  src: url(../fonts/georgia-regular.ttf); }
+@font-face {
+  font-family: 'Arial';
+  src: url(../fonts/arial/arial-regular.ttf); }
+
+/*# sourceMappingURL=variables.css.map */
