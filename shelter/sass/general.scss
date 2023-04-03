@@ -41,8 +41,64 @@ body::-webkit-scrollbar-thumb {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
+  @media (max-width: 1040px) {
+    padding: 0 30px;
+  }
+  @media (max-width: 768px) {
+    max-width: 728px;
+    padding: 0px 10px;
+  }
+  @media (max-width: 405px) {
+    max-width: 322px;
+    padding: 0px 10px;
+  }
 }
 .wrapper {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 946px) {
+  .column-wrapper {
+    flex-direction: column;
+  }
+}
+.reverse-wrapper {
+  @media (max-width: 946px) {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 700px) {
+  .navigation {
+    display: none;
+  }
+  .burger {
+    align-self: center;
+    position: relative;
+    width: 31px;
+    height: 19px;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+  }
+  .burger span {
+    position: absolute;
+    width: 31px;
+    height: 0px;
+    border: 1.5px solid $color-primary;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+
+  .burger span:nth-child(1) {
+    transform: translateY(-2px);
+  }
+  .burger span:nth-child(2) {
+    transform: translateY(8px);
+  }
+  .burger span:nth-child(3) {
+    transform: translateY(18px);
+  }
+}
+// .burger span:nth-child(4) {
+//   transform: translateY(23px);
+// }
