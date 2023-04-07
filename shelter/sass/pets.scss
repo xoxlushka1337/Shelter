@@ -1,7 +1,7 @@
 @import '../sass/normalaiz.scss';
 @import '../sass/variables.scss';
 @import '../sass/general.scss';
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .burger span {
     position: absolute;
     width: 31px;
@@ -26,15 +26,7 @@
 }
 
 .navigation {
-  align-self: center;
-  font-family: $additional-font;
-  font-size: 15px;
-  &__list {
-    display: flex;
-  }
-
   &__li {
-    margin-left: 36px;
     a {
       color: $color-dark-l;
     }
@@ -50,6 +42,11 @@
     a {
       color: $color-dark-3xl;
     }
+  }
+}
+@media (max-width: 767px) {
+  .navigation {
+    background-color: $color-dark-s;
   }
 }
 
