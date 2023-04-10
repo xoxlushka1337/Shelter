@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-ul[class],
+ul,
 ol[class] {
   padding: 0;
 }
@@ -31,7 +31,7 @@ body {
   text-rendering: optimizeSpeed;
   margin: 0;
 }
-ul[class],
+ul,
 ol[class] {
   list-style: none;
 }

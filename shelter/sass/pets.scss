@@ -151,7 +151,7 @@
       margin-right: 10px;
     }
   }
-  &__arrow-left {
+  .no-active {
     @extend %border-inactive;
   }
   &__arrow-current {
