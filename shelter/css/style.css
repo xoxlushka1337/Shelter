@@ -48,7 +48,7 @@
   background-color: #fddcc4;
   transition: all 0.5s; }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .burger span {
     position: absolute;
     width: 31px;
@@ -128,7 +128,7 @@
   .start-screen__dog {
     width: 698px;
     height: 728px; }
-    @media (max-width: 1008px) {
+    @media (max-width: 1037px) {
       .start-screen__dog {
         width: 569px;
         height: 593px; } }
@@ -241,7 +241,7 @@
     align-self: center;
     background-image: url(../imgs/pets/slider-Arrow-left.png);
     margin-right: 54px; }
-    @media (max-width: 1166px) {
+    @media (max-width: 1276px) {
       .slider__arrow-left {
         margin-right: 12px; } }
     @media (max-width: 714px) {
@@ -253,7 +253,17 @@
         top: 455px;
         left: 57px; } }
   .slider__cards {
-    display: flex; }
+    display: flex;
+    width: 1080px;
+    column-gap: 90px;
+    overflow: hidden;
+    position: relative; }
+    @media (max-width: 1276px) {
+      .slider__cards {
+        column-gap: 40px; } }
+    @media (max-width: 470px) {
+      .slider__cards {
+        column-gap: 0px; } }
   @media (max-width: 1100px) {
     .slider__card-none {
       display: none; } }
@@ -265,13 +275,21 @@
     background: #fafafa;
     border-radius: 9px;
     padding-bottom: 30px;
-    margin-right: 90px; }
-    @media (max-width: 1166px) {
-      .slider__card {
-        margin-right: 40px; } }
-    @media (max-width: 470px) {
-      .slider__card {
-        margin-right: 0px; } }
+    position: relative; }
+  .slider .fu {
+    animation: move 1.5s; }
+@keyframes move {
+  from {
+    left: -650px; }
+  to {
+    left: 0px; } }
+  .slider .ri {
+    animation: move-ri 1.5s; }
+@keyframes move-ri {
+  from {
+    right: -650px; }
+  to {
+    right: 0px; } }
   .slider__card:hover {
     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     background: #ffffff;
@@ -293,13 +311,13 @@
   .slider__arrow-right {
     align-self: center;
     background-image: url(../imgs/pets/slider-Arrow-right.png);
-    margin-left: -37px; }
-    @media (max-width: 1166px) {
+    margin-left: 54px; }
+    @media (max-width: 1276px) {
       .slider__arrow-right {
-        margin-left: -28px; } }
+        margin-left: 12px; } }
     @media (max-width: 714px) {
       .slider__arrow-right {
-        margin-left: -10px; } }
+        margin-left: 35px; } }
     @media (max-width: 470px) {
       .slider__arrow-right {
         position: absolute;

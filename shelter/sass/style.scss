@@ -1,5 +1,5 @@
 @import '../sass/variables.scss';
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .burger span {
     position: absolute;
     width: 31px;
@@ -100,7 +100,7 @@
   &__dog {
     width: 698px;
     height: 728px;
-    @media (max-width: 1008px) {
+    @media (max-width: 1037px) {
       width: 569px;
       height: 593px;
     }
@@ -247,7 +247,7 @@
     align-self: center;
     background-image: url(../imgs/pets/slider-Arrow-left.png);
     margin-right: 54px;
-    @media (max-width: 1166px) {
+    @media (max-width: 1276px) {
       margin-right: 12px;
     }
     @media (max-width: 714px) {
@@ -262,6 +262,16 @@
 
   &__cards {
     display: flex;
+    width: 1080px;
+    column-gap: 90px;
+    overflow: hidden;
+    position: relative;
+    @media (max-width: 1276px) {
+      column-gap: 40px;
+    }
+    @media (max-width: 470px) {
+      column-gap: 0px;
+    }
   }
 
   &__card-none {
@@ -283,12 +293,29 @@
     background: $color-light-s;
     border-radius: 9px;
     padding-bottom: 30px;
-    margin-right: 90px;
-    @media (max-width: 1166px) {
-      margin-right: 40px;
+    position: relative;
+  }
+  .fu {
+    animation: move 1.5s;
+  }
+  @keyframes move {
+    from {
+      left: -650px;
     }
-    @media (max-width: 470px) {
-      margin-right: 0px;
+    to {
+      left: 0px;
+    }
+  }
+
+  .ri {
+    animation: move-ri 1.5s;
+  }
+  @keyframes move-ri {
+    from {
+      right: -650px;
+    }
+    to {
+      right: 0px;
     }
   }
 
@@ -322,13 +349,14 @@
     @extend %border;
     align-self: center;
     background-image: url(../imgs/pets/slider-Arrow-right.png);
-    margin-left: -37px;
-    @media (max-width: 1166px) {
-      margin-left: -28px;
+    margin-left: 54px;
+    @media (max-width: 1276px) {
+      margin-left: 12px;
     }
     @media (max-width: 714px) {
-      margin-left: -10px;
+      margin-left: 35px;
     }
+
     @media (max-width: 470px) {
       position: absolute;
       top: 455px;
