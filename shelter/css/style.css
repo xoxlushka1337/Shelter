@@ -255,9 +255,7 @@
   .slider__cards {
     display: flex;
     width: 1080px;
-    column-gap: 90px;
-    overflow: hidden;
-    position: relative; }
+    column-gap: 90px; }
     @media (max-width: 1276px) {
       .slider__cards {
         column-gap: 40px; } }

@@ -264,8 +264,7 @@
     display: flex;
     width: 1080px;
     column-gap: 90px;
-    overflow: hidden;
-    position: relative;
+
     @media (max-width: 1276px) {
       column-gap: 40px;
     }

@@ -816,9 +816,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     width: 1080px;
     -webkit-column-gap: 90px;
-            column-gap: 90px;
-    overflow: hidden;
-    position: relative; }
+            column-gap: 90px; }
     @media (max-width: 1276px) {
       .slider__cards {
         -webkit-column-gap: 40px;
