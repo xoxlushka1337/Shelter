@@ -254,7 +254,6 @@
         left: 57px; } }
   .slider__cards {
     display: flex;
-    width: 1080px;
     column-gap: 90px; }
     @media (max-width: 1276px) {
       .slider__cards {
@@ -272,8 +271,7 @@
     text-align: center;
     background: #fafafa;
     border-radius: 9px;
-    padding-bottom: 30px;
-    position: relative; }
+    padding-bottom: 30px; }
   .slider .fu {
     animation: move 1.5s; }
 @keyframes move {
