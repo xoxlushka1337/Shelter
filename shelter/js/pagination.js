@@ -34,17 +34,48 @@ const animals = [
 ];
 
 let newAnimals = [];
+let numberOfCards = 8;
+let quantityPets = 6;
+
+// if (matchMedia) {
+//   let screen = window.matchMedia(`(max-width: 771px)`);
+//   screen.addListener(changes);
+//   changes(screen);
+// }
+
+window.addEventListener('resize', () => {
+  let width = document.body.clientWidth;
+  if (width > 770) {
+    numberOfCards = 8;
+    quantityPets = 6;
+
+    return;
+  }
+  if (width < 771 && width > 406) {
+    numberOfCards = 6;
+    quantityPets = 8;
+
+    return;
+  }
+  if (width < 406) {
+    numberOfCards = 3;
+    quantityPets = 12;
+
+    return;
+  }
+});
 
 // тоже нужно от медиазапроса плясать
-for (let i = 0; i < 6; i++) {
-  newAnimals.push(...getRandomAnimalsFrom(animals));
+function createsRandomNewAnimals() {
+  for (let i = 0; i < quantityPets; i++) {
+    newAnimals.push(...getRandomAnimalsFrom(animals));
+  }
 }
 
 function getRandomAnimalsFrom(animals) {
   let randomAnimals = [];
   const usedIndex = [];
 
-  let numberOfCards = 8;
   while (usedIndex.length != numberOfCards) {
     const randomIndex = Math.floor(Math.random() * animals.length);
 
@@ -70,41 +101,24 @@ let sliceAnimals;
 let numberPage = 1;
 //текущая страница
 function currentPage() {
-  sliceAnimals = newAnimals.slice(0, 8);
+  sliceAnimals = newAnimals.slice(0, numberOfCards);
   arrowLeft.classList.add('no-active');
   arrowLeftDouble.classList.add('no-active');
   renderCards(sliceAnimals);
   arrowCurrent.textContent = numberPage;
 }
 currentPage();
+
 arrowRight.addEventListener('click', function () {
   numberPage++;
   arrowCurrent.textContent = numberPage;
   arrowLeft.classList.remove('no-active');
   arrowLeftDouble.classList.remove('no-active');
-  if (numberPage === 2) {
-    sliceAnimals = newAnimals.slice(8, 16);
-    renderCards(sliceAnimals);
-    return;
-  }
-  if (numberPage === 3) {
-    sliceAnimals = newAnimals.slice(16, 24);
-    renderCards(sliceAnimals);
-    return;
-  }
-  if (numberPage === 4) {
-    sliceAnimals = newAnimals.slice(24, 32);
-    renderCards(sliceAnimals);
-    return;
-  }
-  if (numberPage === 5) {
-    sliceAnimals = newAnimals.slice(32, 40);
-    renderCards(sliceAnimals);
-    return;
-  }
-  if (numberPage === 6) {
-    sliceAnimals = newAnimals.slice(40, 48);
-    renderCards(sliceAnimals);
+
+  sliceAnimals = newAnimals.slice((numberPage - 1) * numberOfCards, numberPage * numberOfCards);
+  renderCards(sliceAnimals);
+
+  if (numberPage * numberOfCards == 48) {
     arrowRight.classList.add('no-active');
     arrowRightDouble.classList.add('no-active');
     return;
@@ -114,46 +128,23 @@ arrowRight.addEventListener('click', function () {
 arrowRightDouble.addEventListener('click', function () {
   arrowLeft.classList.remove('no-active');
   arrowLeftDouble.classList.remove('no-active');
-  numberPage = 6;
+  numberPage = quantityPets;
   arrowCurrent.textContent = numberPage;
-  sliceAnimals = newAnimals.slice(40, 48);
+  sliceAnimals = newAnimals.slice(48 - numberOfCards, 48);
   renderCards(sliceAnimals);
   arrowRight.classList.add('no-active');
   arrowRightDouble.classList.add('no-active');
 });
 
 arrowLeft.addEventListener('click', function () {
-  numberPage = numberPage - 1;
+  numberPage -= 1;
   arrowCurrent.textContent = numberPage;
   arrowRight.classList.remove('no-active');
   arrowRightDouble.classList.remove('no-active');
-  if (numberPage === 1) {
-    currentPage();
-    return;
-  }
-  if (numberPage === 2) {
-    sliceAnimals = newAnimals.slice(8, 16);
-    renderCards(sliceAnimals);
-    return;
-  }
-  if (numberPage === 3) {
-    sliceAnimals = newAnimals.slice(16, 24);
-    renderCards(sliceAnimals);
-    return;
-  }
-  if (numberPage === 4) {
-    sliceAnimals = newAnimals.slice(24, 32);
-    renderCards(sliceAnimals);
-    return;
-  }
-  if (numberPage === 5) {
-    sliceAnimals = newAnimals.slice(32, 40);
-    renderCards(sliceAnimals);
-    return;
-  }
-  if (numberPage === 6) {
-    sliceAnimals = newAnimals.slice(40, 48);
-    renderCards(sliceAnimals);
+  sliceAnimals = newAnimals.slice((numberPage - 1) * numberOfCards, numberPage * numberOfCards);
+  renderCards(sliceAnimals);
+
+  if (numberPage * numberOfCards == 48) {
     arrowRight.classList.add('no-active');
     arrowRightDouble.classList.add('no-active');
     return;
@@ -182,5 +173,5 @@ function setCard(cardElement, cardData) {
   img.src = cardData.img;
   title.textContent = cardData.title;
 }
-
+createsRandomNewAnimals();
 console.log(newAnimals);

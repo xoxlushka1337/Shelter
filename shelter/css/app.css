@@ -814,7 +814,6 @@ body::-webkit-scrollbar-thumb {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 1080px;
     -webkit-column-gap: 90px;
             column-gap: 90px; }
     @media (max-width: 1276px) {
@@ -835,8 +834,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     background: #fafafa;
     border-radius: 9px;
-    padding-bottom: 30px;
-    position: relative; }
+    padding-bottom: 30px; }
   .slider .fu {
     -webkit-animation: move 1.5s;
             animation: move 1.5s; }

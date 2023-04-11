@@ -262,7 +262,6 @@
 
   &__cards {
     display: flex;
-    width: 1080px;
     column-gap: 90px;
 
     @media (max-width: 1276px) {
@@ -292,7 +291,6 @@
     background: $color-light-s;
     border-radius: 9px;
     padding-bottom: 30px;
-    position: relative;
   }
   .fu {
     animation: move 1.5s;
