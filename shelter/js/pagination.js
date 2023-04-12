@@ -59,7 +59,7 @@ window.addEventListener('resize', () => {
   }
   if (width < 406) {
     numberOfCards = 3;
-    quantityPets = 12;
+    quantityPets = 16;
 
     return;
   }
